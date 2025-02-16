@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 en Raya para XLAM</title>
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 5px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .cell {
+            width: 100px;
+            height: 100px;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            border: 2px solid #181818;
+            cursor: pointer;
+        }
+        .cell:hover {
+            background-color: #ddd;
+        }
+        .message {
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 25px;
+            font-family: JetBrains Mono;
+        }
+        #resetBtn {
+            display: block;
+            margin: 20px auto; /* Centrado horizontal */
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #resetBtn:hover {
+        background-color: #45a049;
+        }
+
+        h1 {
+            font-family: JetBrains Mono;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>¡Bienvenido al 3 en Raya!</h1>
+    <div id="message" class="message"></div>
+    <div class="board" id="board"></div>
+    <button id="resetBtn" onclick="reiniciarJuego()">Volver a empezar</button>
+
+    <script src="tres-en-raya.js"></script>
+</body>
+</html>
